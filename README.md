@@ -2,3 +2,5 @@
 
 Built using React
 Part of "Learn React" module
+
+Access live demo: https://beckibloom.github.io/sallystudent-resume2/
