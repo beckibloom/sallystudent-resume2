@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Sally Student: Coder Extraordinaire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,7 +34,7 @@
     const header = (
         <header>
             <div className="heading-text">
-                <h1 className="white">Sally Student</h1>
+                <h1 className="white">{props.firstName} {props.midInit} {props.lastName}</h1>
                 {subtitle}
             </div>
             {image}
@@ -57,10 +58,14 @@
                 </ol>
         </section>
     );
+    const contactImage = (
+        <img src='http://tribzap2it.files.wordpress.com/2014/12/aisha-dee-chasing-life-abc-family.jpg?w=1400' alt='Actress Aisha Dee' className='contact-img' />
+    )
     const contact = (
         <section className="contact">
-            <h2>Contact Me</h2>
+            <h2>Contact {props.firstName} {props.lastName}</h2>
             <address>
+                <p>{contactImage}</p>
                 <p><span className="bold">Email:</span> <a href="mailto:sallystudent@email.com">SallyStudent@email.com</a></p>
                 <p><span className="bold">Phone:</span> 800-588-2300</p>
             </address>
@@ -80,7 +85,7 @@
     // Use App Component:
     // insert the App's element tree into the #application-root
     ReactDOM.render(
-    <App>
+    <App firstName="Sally" midInit="P." lastName="Student">
     </App>,
     document.querySelector('#application-root')
     );

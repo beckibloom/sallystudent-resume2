@@ -55,8 +55,12 @@ section {
     text-align:center;
 }
 
-.education h2, .contact h2 {
+.education h2 {
     padding-top: 100px;
+}
+
+.contact h2 {
+    padding-top:50px;
 }
 
 .employment {
@@ -77,6 +81,12 @@ section {
 .contact {
     background:white;
     color:black;
+}
+
+.contact-img {
+    height:203px;
+    margin-top:10px;
+    margin-bottom:10px;
 }
 
 main {
