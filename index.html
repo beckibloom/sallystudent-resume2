@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sally Student: Coder Extraordinaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="application-root"></div>
+    <footer role="contentinfo">© 2019 Sally Student</footer>
+</body>
+
+<script
+  src="https://unpkg.com/react@16/umd/react.development.js">
+</script>
+<script
+  src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+</script>
+<script
+  src="https://unpkg.com/babel-standalone@6/babel.min.js">
+</script>
+
+<script type="text/babel">
+    // App Component
+    function App(props) {
+    console.log(props);
+
+    const subtitle = (
+        <p>Welcome to my resume.</p>
+    );
+    const image = (
+        <img src='https://pbs.twimg.com/profile_images/710379149362208768/zfuT8Tmk_400x400.jpg' alt='Actress Aisha Dee' />
+    );
+    const header = (
+        <header>
+            <div className="heading-text">
+                <h1 className="white">Sally Student</h1>
+                {subtitle}
+            </div>
+            {image}
+        </header>
+    );
+    const education = (
+        <section className="education">
+            <h2>Education</h2>
+            <p>College of Hard Knocks, Class of 2002</p>
+            <p>GPA: 3.9</p> 
+        </section>
+    );
+    const employment = (
+        <section className="employment">
+            <h2>Employment History</h2>
+            <ol>
+                <li><span className="bold">Super Developer</span> at <span className="italic">The Internet</span>, May 2015-Present: 
+                    <p>Lorem ipsum dolor sit amet, erant suavitate percipitur ut vim, qui ei vide accusamus. Libris postulant suscipiantur id vix, sit labore audiam inciderint ex, nam ne animal euripidis. Per tempor electram an.</p></li>
+                <li><span className="bold">Manager</span> at <span className="italic">Company</span>, August 2010-April 2015
+                    <p>Lorem ipsum dolor sit amet, erant suavitate percipitur ut vim, qui ei vide accusamus. Libris postulant suscipiantur id vix, sit labore audiam inciderint ex, nam ne animal euripidis. Per tempor electram an.</p></li>
+                </ol>
+        </section>
+    );
+    const contact = (
+        <section className="contact">
+            <h2>Contact Me</h2>
+            <address>
+                <p><span className="bold">Email:</span> <a href="mailto:sallystudent@email.com">SallyStudent@email.com</a></p>
+                <p><span className="bold">Phone:</span> 800-588-2300</p>
+            </address>
+        </section>
+    );
+
+    return (
+        <main>
+            {header}
+            {education}
+            {employment}
+            {contact}
+        </main>
+    );
+};
+
+    // Use App Component:
+    // insert the App's element tree into the #application-root
+    ReactDOM.render(
+    <App>
+    </App>,
+    document.querySelector('#application-root')
+    );
+</script>
+
+</html>
